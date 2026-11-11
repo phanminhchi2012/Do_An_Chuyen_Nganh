@@ -1,0 +1,53 @@
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/*
+!.vscode/launch.json
+
+### Local database and build checks ###
+.postgresql-recovery/
+.maven-local/
+.build-check/
+PostgreSQL shortcuts/
+frontend/node_modules/
+frontend/dist/
+.env
+.env.*
+!*.env.example
+local-dev.properties
+SESSION-NOTES.md
+local-warranty-videos/
+local-product-images/
+.local-secrets/
+.local-backups/
+deploy/scalys.env
+.neon
+node_modules/

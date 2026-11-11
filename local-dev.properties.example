@@ -1,0 +1,43 @@
+# Copy this file to local-dev.properties and fill in values after installing PostgreSQL.
+# Keep local-dev.properties on this computer only; it is ignored by Git.
+DB_URL=jdbc:postgresql://127.0.0.1:5432/scalys
+DB_USERNAME=scalys_app
+DB_PASSWORD=CHANGE_ME
+
+# Optional in dev. Required if you want to sign in to the admin pages.
+# ADMIN_USERNAME=admin
+# ADMIN_PASSWORD_HASH=REPLACE_WITH_A_REAL_BCRYPT_HASH
+
+# Register a test merchant at https://sandbox.vnpayment.vn/devreg/.
+# Keep the secret in local-dev.properties; do not send it to the frontend or commit it.
+# VNPAY_TMN_CODE=YOUR_TEST_TMN_CODE
+# VNPAY_HASH_SECRET=YOUR_TEST_HASH_SECRET
+# VNPAY_RETURN_URL=http://127.0.0.1:2003/orders/payment-result
+# For a local-only sandbox run: verify the signed browser return on the backend.
+# This setting is honored only by the dev profile with a loopback Return URL.
+# VNPAY_LOCAL_RETURN_CONFIRM=true
+# VNPAY_IPN_URL=https://your-public-https-domain.example/api/payments/vnpay/ipn
+
+# Optional email delivery. Until configured, messages stay queued in email_outbox.
+# SHOP_MAIL_ENABLED=true
+# SHOP_MAIL_FROM=shop@example.com
+# SHOP_CONTACT_EMAIL=shop@example.com
+# SHOP_PUBLIC_URL=https://your-public-https-domain.example
+# SMTP_HOST=smtp.example.com
+# SMTP_PORT=587
+# SMTP_USERNAME=shop@example.com
+# SMTP_PASSWORD=YOUR_SMTP_PASSWORD
+
+# ZaloPay sandbox: copy AppID, Key1 and Key2 from official developer test credentials.
+# ZALOPAY_APP_ID=YOUR_SANDBOX_APP_ID
+# ZALOPAY_KEY1=YOUR_SANDBOX_KEY1
+# ZALOPAY_KEY2=YOUR_SANDBOX_KEY2
+# ZALOPAY_RETURN_URL=http://localhost:2003/orders/zalopay-result
+
+# Google customer login. Create a Web application OAuth client in Google Auth Platform.
+# Add http://127.0.0.1:2003/login/oauth2/code/google as an authorized redirect URI.
+# Keep the client secret only in ignored local-dev.properties, never in frontend files.
+# spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID
+# spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET
+# spring.security.oauth2.client.registration.google.scope=openid,profile,email
+# spring.security.oauth2.client.registration.google.redirect-uri=http://127.0.0.1:2003/login/oauth2/code/google

@@ -1,0 +1,16 @@
+.git
+.neon
+.env
+.env.*
+local-dev.properties
+.postgresql-recovery
+.build-check
+.maven-local
+node_modules
+frontend
+target
+local-product-images
+local-warranty-videos
+.local-secrets
+.local-backups
+deploy/scalys.env

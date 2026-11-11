@@ -1,0 +1,19 @@
+[Unit]
+Description=Scalys Spring Boot API
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=scalys
+Group=scalys
+WorkingDirectory=/opt/scalys
+EnvironmentFile=/etc/scalys/scalys.env
+ExecStart=/usr/bin/java -jar /opt/scalys/scalys.jar
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

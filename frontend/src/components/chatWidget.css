@@ -1,0 +1,31 @@
+.faq-chat { position: fixed; z-index: 22; right: 22px; bottom: 20px; display: grid; justify-items: end; gap: 12px; font-family: var(--font-ui); }
+.faq-chat-launcher { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 8px 17px 8px 9px; border: 1px solid #315d40; border-radius: 999px; background: #315d40; box-shadow: 0 12px 28px rgba(23, 50, 31, .23); color: #fff; font-size: 13px; font-weight: 800; cursor: pointer; }
+.faq-chat-launcher:hover { background: #254c34; }
+.faq-chat-launcher-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, .15); font-family: var(--font-ui); font-size: 20px; line-height: 1; }
+.faq-chat-panel { display: flex; flex-direction: column; width: min(390px, calc(100vw - 24px)); height: min(560px, calc(100dvh - 98px)); overflow: hidden; border: 1px solid #dbe5d9; border-radius: 17px; background: #fffefb; box-shadow: 0 22px 65px rgba(18, 41, 24, .22); }
+.faq-chat-head { display: flex; align-items: center; gap: 11px; min-height: 73px; padding: 13px 16px; background: #294e37; color: #fff; }
+.faq-chat-mark { display: grid; flex: none; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.35); border-radius: 12px; font-family: var(--font-ui); font-size: 25px; font-style: italic; }
+.faq-chat-head > div { display: grid; gap: 3px; min-width: 0; }
+.faq-chat-head strong { font-size: 14px; }
+.faq-chat-head small { color: #d4e4d3; font-size: 10px; }
+.faq-chat-head > button { margin-left: auto; border: 0; background: transparent; color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
+.faq-chat-messages { display: flex; flex: 1; flex-direction: column; gap: 10px; min-height: 0; overflow-y: auto; padding: 18px 15px; background: #f7f9f5; overscroll-behavior: contain; }
+.faq-chat-message { max-width: 88%; padding: 11px 13px; border-radius: 13px; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.faq-chat-message p { margin: 0; }
+.faq-chat-message.is-shop { align-self: flex-start; border: 1px solid #e2e9df; border-bottom-left-radius: 4px; background: #fff; color: #405844; }
+.faq-chat-message.is-customer { align-self: flex-end; border-bottom-right-radius: 4px; background: #34674a; color: #fff; }
+.faq-chat-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
+.faq-chat-links a { padding: 6px 9px; border-radius: 7px; background: #edf4ec; color: #315f42; font-size: 11px; font-weight: 800; text-decoration: none; }
+.faq-chat-links a:hover { background: #dcebd9; }
+.faq-chat-suggestions { display: flex; gap: 6px; overflow-x: auto; padding: 10px 12px 8px; border-top: 1px solid #e8eee5; scrollbar-width: thin; }
+.faq-chat-suggestions button { flex: none; padding: 7px 10px; border: 1px solid #d8e5d4; border-radius: 999px; background: #f4f8f2; color: #41694a; font-size: 10px; font-weight: 700; cursor: pointer; }
+.faq-chat-suggestions button:hover { background: #e7f0e3; }
+.faq-chat-compose { display: flex; align-items: center; gap: 7px; padding: 8px 12px; }
+.faq-chat-compose input { flex: 1; min-width: 0; min-height: 38px; padding: 9px 11px; border: 1px solid #dbe6d9; border-radius: 9px; outline: none; background: #fff; color: #263e2e; font: inherit; font-size: 12px; }
+.faq-chat-compose input:focus { border-color: #69956e; box-shadow: 0 0 0 2px #e7f2e7; }
+.faq-chat-compose button { flex: none; width: 38px; height: 38px; border: 0; border-radius: 9px; background: #315d40; color: #fff; cursor: pointer; }
+.faq-chat-compose button:disabled { opacity: .45; cursor: default; }
+.faq-chat-note { margin: 0; padding: 0 14px 11px; color: #859585; font-size: 10px; text-align: center; }
+.faq-chat-note a { color: #386d48; font-weight: 800; }
+.faq-chat-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+@media (max-width: 560px) { .faq-chat { right: 12px; bottom: 12px; }.faq-chat-panel { width: calc(100vw - 24px); height: min(560px, calc(100dvh - 82px)); }.faq-chat-launcher { min-height: 47px; }.faq-chat-launcher-icon { width: 31px; height: 31px; } }

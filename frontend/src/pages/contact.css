@@ -1,0 +1,36 @@
+.contact-page { display: flex; flex-direction: column; min-height: 100vh; }
+.contact-header { display: flex; justify-content: space-between; align-items: center; }
+.contact-back { color: #315b3f; font-size: 13px; font-weight: 800; text-decoration: none; }
+.contact-back:hover { text-decoration: underline; }
+.contact-main { display: grid; flex: 1 0 auto; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(30px, 6vw, 95px); align-items: center; width: min(1120px, calc(100% - 48px)); margin: 35px auto 70px; }
+.contact-intro h1 { max-width: 530px; margin: 18px 0; color: #284b34; font-family: var(--font-ui); font-size: clamp(42px, 5vw, 68px); font-weight: 500; letter-spacing: 0; line-height: 1.2; }
+.contact-intro h1 em { color: #729374; font-weight: 400; }
+.contact-intro > p:not(.detail-kicker) { max-width: 390px; color: #718371; font-size: 15px; line-height: 1.8; }
+.contact-intro-note { display: flex; align-items: center; gap: 16px; max-width: 390px; margin-top: 40px; padding-top: 25px; border-top: 1px solid #d8e3d5; }
+.contact-intro-note > span { display: grid; flex: none; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #e6efe3; color: #447853; font-size: 24px; }
+.contact-intro-note > div { display: grid; gap: 5px; }
+.contact-intro-note strong { color: #365740; font-size: 13px; }
+.contact-intro-note small { color: #819181; font-size: 12px; }
+.contact-form-card { padding: clamp(25px, 4vw, 45px); border: 1px solid #dde7da; border-radius: 20px; background: #fffefb; box-shadow: 0 22px 60px rgba(29, 55, 34, .08); }
+.contact-form-kicker { margin: 0; color: #6e9270; font-size: 10px; font-weight: 800; letter-spacing: .2em; }
+.contact-form-card h2 { margin: 9px 0 29px; color: #2b4e36; font-family: var(--font-ui); font-size: 30px; font-weight: 500; }
+.contact-form { display: grid; gap: 18px; }
+.contact-form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.contact-form label { display: grid; gap: 8px; color: #3d5f47; font-size: 12px; font-weight: 800; }
+.contact-form label span { color: #b75c50; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 13px 15px; border: 1px solid #d8e3d6; border-radius: 10px; outline: none; background: #fbfcf9; color: #263e2e; font: inherit; font-size: 13px; font-weight: 400; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: #5e9068; box-shadow: 0 0 0 3px #e7f1e7; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #a0ad9e; }
+.contact-form > small { color: #849385; font-size: 11px; line-height: 1.5; }
+.contact-form button, .contact-success a { display: inline-flex; justify-content: center; align-items: center; gap: 16px; min-height: 48px; padding: 12px 20px; border: 0; border-radius: 10px; background: #315d40; color: white; font: inherit; font-size: 13px; font-weight: 800; text-decoration: none; cursor: pointer; }
+.contact-form button:hover, .contact-success a:hover { background: #244b32; }
+.contact-form button:disabled { opacity: .65; cursor: wait; }
+.contact-error { margin: 0; padding: 11px 14px; border-radius: 9px; background: #fff0ed; color: #a94837; font-size: 12px; }
+.contact-success { display: grid; justify-items: start; gap: 10px; padding: 15px 0; }
+.contact-success > span { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: #e7f2e5; color: #317247; font-size: 30px; }
+.contact-success h2 { margin: 8px 0 0; }
+.contact-success p { color: #718371; font-size: 14px; line-height: 1.7; }
+.contact-page .contact-footer { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 9px; width: 100%; max-width: none; min-height: 52px; margin: 0; padding: 12px 20px; border: 0; background: #111613; color: #c2c9c1; font-size: 11px; text-align: center; }
+.contact-footer__mark { display: grid; flex: none; place-items: center; width: 19px; height: 19px; border: 1px solid #aebdaf; border-radius: 50%; color: #d7e2d5; font-family: var(--font-ui); font-size: 12px; font-style: italic; }
+@media (max-width: 800px) { .contact-main { grid-template-columns: 1fr; margin-top: 35px; }.contact-intro-note { margin-top: 24px; } }
+@media (max-width: 560px) { .contact-form-row { grid-template-columns: 1fr; }.contact-intro h1 { font-size: 42px; }.contact-main { width: min(100% - 28px, 1120px); } }

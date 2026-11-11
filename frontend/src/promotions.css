@@ -1,0 +1,40 @@
+.promotion-picker { display: grid; gap: 10px; padding: 16px; border: 1px solid #d8e5d4; border-radius: 12px; background: #f5f9f2; color: #2e5037; }
+.promotion-picker > strong { font-size: 14px; }
+.promotion-picker p { margin: 0; color: #607663; font-size: 12px; line-height: 1.5; }
+.promotion-picker a { color: #2d6540; font-weight: 800; }
+.promotion-picker__entry { display: flex; gap: 8px; }
+.promotion-picker__entry input { flex: 1; min-width: 0; height: 42px; padding: 9px 11px; border: 1px solid #cddfc8; border-radius: 8px; font: inherit; }
+.promotion-picker__entry button { padding: 8px 12px; border: 0; border-radius: 8px; background: #315e3e; color: #fff; font-size: 12px; font-weight: 800; cursor: pointer; }
+.promotion-picker__entry button:disabled { opacity: .55; cursor: default; }
+.promotion-picker__codes { display: flex; flex-wrap: wrap; gap: 7px; }
+.promotion-picker__codes span { display: inline-flex; align-items: center; gap: 5px; padding: 5px 7px; border: 1px solid #d7e4d2; border-radius: 7px; background: #fff; font-size: 11px; font-weight: 700; }
+.promotion-picker__codes .promotion-picker__selected { border-color: #568b61; color: #285b39; }
+.promotion-picker__codes button { padding: 0 2px; border: 0; background: none; color: #718273; font-size: 16px; cursor: pointer; }
+.promotion-picker .promotion-picker__error { color: #a13e32; }
+.promotion-picker__total { display: grid; gap: 5px; padding-top: 10px; border-top: 1px solid #d9e6d6; font-size: 12px; }
+.promotion-picker__total span { display: flex; justify-content: space-between; gap: 10px; }
+.promotion-picker__total strong { color: #245a36; }
+.account-promotions { margin-top: 20px; }
+.account-promotion-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.account-promotion { padding: 17px; border: 1px solid #dce8d8; border-radius: 12px; background: #f9fcf7; }
+.account-promotion h3 { margin: 0 0 8px; color: #2a5136; font-size: 16px; }
+.account-promotion p { margin: 5px 0; color: #667769; font-size: 12px; }
+.account-promotion__code { display: inline-block; margin: 8px 0; padding: 7px 9px; border: 1px dashed #8cab90; border-radius: 7px; background: #fff; color: #245937; font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.account-promotion button { margin-left: 10px; padding: 7px 9px; border: 0; border-radius: 7px; background: #315e3e; color: #fff; font-size: 11px; font-weight: 700; cursor: pointer; }
+.account-promotion__status { font-weight: 800; }
+.account-promotion--used { border-color: #dfe2dc; background: #f4f5f1; }
+.account-promotion--used .account-promotion__code { border-color: #c6cfc4; color: #6e7b6f; }
+.account-promotion--used .account-promotion__status { color: #a1483f; }
+.account-promotion .account-promotion__usage { margin-top: 9px; line-height: 1.7; overflow-wrap: anywhere; }
+.admin-promotion-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.admin-promotion-card { padding: 24px; border: 1px solid #dfe9dc; border-radius: 14px; background: #fff; }
+.admin-promotion-card h2 { margin: 8px 0; color: #294c34; font-family: var(--font-ui); font-size: 23px; }
+.admin-promotion-card p { color: #687b6b; font-size: 12px; line-height: 1.6; }
+.admin-promotion-card button { padding: 8px 14px; border: 1px solid #cde0ca; border-radius: 8px; background: #f4f9f1; color: #315e3e; font-weight: 800; cursor: pointer; }
+.admin-promotion-form { display: grid; gap: 14px; }
+.admin-promotion-form label { display: grid; gap: 6px; color: #405b45; font-size: 12px; font-weight: 700; }
+.admin-promotion-form input { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid #d8e3d4; border-radius: 8px; font: inherit; }
+.admin-promotion-form label:has(input[type="checkbox"]) { display: flex; align-items: center; }
+.admin-promotion-form input[type="checkbox"] { width: 17px; min-height: 17px; height: 17px; }
+.admin-promotion-form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 700px) { .account-promotion-list, .admin-promotion-grid, .admin-promotion-form__row { grid-template-columns: 1fr; } }
