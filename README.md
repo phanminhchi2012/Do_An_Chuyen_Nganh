@@ -115,7 +115,7 @@ Các danh sách dài dùng **phân trang**: mỗi trang chỉ hiện một phầ
 
 ## Chính sách bảo hành trên local
 
-- `/warranty` nêu chính sách shop: không trả hàng/hoàn tiền; nếu lỗi từ shop thì xem xét đổi hàng có giá trị tương đương. Khách phải gửi video quay lúc bóc hàng và mô tả vấn đề để shop kiểm tra. Form yêu cầu mã đơn, số điện thoại đã đặt, tên, email, mô tả và video MP4/WebM/MOV tối đa 100 MB. Mã đơn và số điện thoại phải khớp; không có tài khoản vẫn gửi được.
+- `/warranty` nêu chính sách shop: không trả hàng/hoàn tiền; nếu lỗi từ shop thì xem xét đổi hàng có giá trị tương đương. Khách phải gửi video quay lúc bóc hàng và mô tả vấn đề để shop kiểm tra. Form yêu cầu mã đơn, số điện thoại đã đặt, tên, email, mô tả và video MP4/WebM/MOV tối đa 90 MB. Mã đơn và số điện thoại phải khớp; không có tài khoản vẫn gửi được.
 - Yêu cầu lưu ở `warranty_claims` (Flyway V19). Mặc định video lưu trong `local-warranty-videos/` (hoặc `WARRANTY_STORAGE_DIR`), không nằm trong thư mục public và chỉ admin/staff đăng nhập mới xem được. Khi dùng chế độ local, cần sao lưu cả PostgreSQL và thư mục video.
 - Admin/staff xem `/admin/warranties`, lọc yêu cầu mới/đã liên hệ, xem video rồi đánh dấu đã liên hệ hoặc mở lại. Menu quản trị luôn hiện huy hiệu đỏ đếm yêu cầu mới, kể cả 0. Thao tác đổi trạng thái được ghi vào nhật ký.
 

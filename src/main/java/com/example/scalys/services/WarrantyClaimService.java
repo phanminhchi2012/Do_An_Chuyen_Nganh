@@ -26,7 +26,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class WarrantyClaimService {
-    private static final long MAX_VIDEO_BYTES = 100L * 1024 * 1024;
+    private static final long MAX_VIDEO_BYTES = 90L * 1024 * 1024;
     private final WarrantyClaimRepository claims;
     private final OrderRepository orders;
     private final WarrantySubmissionLimiter limiter;
@@ -58,7 +58,7 @@ public class WarrantyClaimService {
                 || cleanDescription.length() < 10 || cleanDescription.length() > 2000)
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Vui lòng kiểm tra thông tin yêu cầu bảo hành.");
         if (video == null || video.isEmpty() || video.getSize() > MAX_VIDEO_BYTES)
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Video phải có dung lượng từ 1 byte đến 100 MB.");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Video phải có dung lượng từ 1 byte đến 90 MB.");
         String type = video.getContentType();
         if (!"video/mp4".equals(type) && !"video/webm".equals(type) && !"video/quicktime".equals(type))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Chỉ nhận video MP4, WebM hoặc MOV.");

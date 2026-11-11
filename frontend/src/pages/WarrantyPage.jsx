@@ -22,8 +22,8 @@ export default function WarrantyPage() {
   async function send(event) {
     event.preventDefault()
     if (busy) return
-    if (!form.video || form.video.size > 100 * 1024 * 1024) {
-      setError('Vui lòng chọn video MP4, WebM hoặc MOV không quá 100 MB.')
+    if (!form.video || form.video.size > 90 * 1024 * 1024) {
+      setError('Vui lòng chọn video MP4, WebM hoặc MOV không quá 90 MB.')
       return
     }
     setBusy(true); setError('')
@@ -64,7 +64,7 @@ export default function WarrantyPage() {
                 <label>Email liên hệ <span>*</span><input type="email" value={form.email} required maxLength="254" autoComplete="email" onChange={(event) => setForm({ ...form, email: event.target.value })} /></label>
               </div>
               <label>Hàng hóa bị vấn đề gì? <span>*</span><textarea value={form.description} required minLength="10" maxLength="2000" rows="5" onChange={(event) => setForm({ ...form, description: event.target.value })} placeholder="Mô tả sản phẩm và vấn đề bạn thấy khi mở hàng" /></label>
-              <label>Video quay lúc bóc hàng <span>*</span><input type="file" accept="video/mp4,video/webm,video/quicktime,.mp4,.webm,.mov" required onChange={(event) => setForm({ ...form, video: event.target.files?.[0] || null })} /><small>Nhận MP4, WebM hoặc MOV, tối đa 100 MB. Chỉ shop có quyền xem video.</small></label>
+              <label>Video quay lúc bóc hàng <span>*</span><input type="file" accept="video/mp4,video/webm,video/quicktime,.mp4,.webm,.mov" required onChange={(event) => setForm({ ...form, video: event.target.files?.[0] || null })} /><small>Nhận MP4, WebM hoặc MOV, tối đa 90 MB. Chỉ shop có quyền xem video.</small></label>
               {error && <p className="contact-error" role="alert">{error}</p>}
               <button type="submit" disabled={busy}>{busy ? 'Đang tải video...' : 'Gửi yêu cầu'} <span aria-hidden="true">↗</span></button>
             </form></>}

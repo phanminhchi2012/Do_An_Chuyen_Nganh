@@ -18,6 +18,6 @@ public class WarrantyClaimExceptionHandler {
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public ResponseEntity<ApiError> tooLarge() {
         return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
-                .body(new ApiError("Video vượt quá 100 MB. Vui lòng chọn video ngắn hơn."));
+                .body(new ApiError("Video vượt quá 90 MB. Vui lòng chọn video ngắn hơn."));
     }
 }
