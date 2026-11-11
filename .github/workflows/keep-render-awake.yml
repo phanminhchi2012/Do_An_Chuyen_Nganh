@@ -1,0 +1,24 @@
+name: Keep Scalys API awake
+
+on:
+  schedule:
+    # Offset from the top of the hour, when GitHub schedules are often delayed.
+    - cron: '3/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Ping Render API
+        run: |
+          curl --fail --silent --show-error --location \
+            --connect-timeout 10 --max-time 20 \
+            --retry 2 --retry-delay 5 --retry-all-errors \
+            --output /dev/null \
+            --write-out 'HTTP %{http_code}; elapsed %{time_total}s\n' \
+            'https://scalys-api.onrender.com/api/payments/vnpay/availability'
